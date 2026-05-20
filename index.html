@@ -1002,15 +1002,15 @@ class Game {
     const stats=[
       {i:'📊',l:'Precisión',              v:`${acc}%`,            c:acc>=70?'g':'b',      w:true },
       {i:'🎯',l:'Total turnos',           v:this.turns,           c:'',                   w:false},
+      {i:'⏱️',l:'Tiempo prom. por turno', v:`${avgT}s`,           c:'',                   w:false},
       {i:'✅',l:'Aciertos',               v:this.hits,            c:'g',                  w:false},
       {i:'❌',l:'Errores',                v:this.misses,          c:'b',                  w:false},
-      {i:'🔥',l:'Mejor combo',            v:`×${this.maxCombo}`,  c:'p',                  w:false},
-      {i:'⚡',l:'Relámpagos ganados',     v:this.lhits,           c:'p',                  w:false},
-      {i:'🛡️',l:'Escudos usados',         v:this.shUsed,          c:'',                   w:false},
-      {i:'🛡️',l:'Escudos ganados',        v:this.shEarned,        c:'g',                  w:false},
-      {i:'⏱️',l:'Tiempo prom. por turno', v:`${avgT}s`,           c:'',                   w:false},
-      {i:'⚡',l:'Respuesta más rápida',   v:`${fastT}s`,          c:'g',                  w:false},
       {i:'⭐',l:'Pts por acierto',        v:avgP,                 c:'',                   w:false},
+      {i:'🔥',l:'Mejor combo',            v:`×${this.maxCombo}`,  c:'p',                  w:false},
+      {i:'🛡️',l:'Escudos ganados',        v:this.shEarned,        c:'g',                  w:false},
+      {i:'🛡️',l:'Escudos usados',         v:this.shUsed,          c:'',                   w:false},
+      {i:'⚡',l:'Relámpagos ganados',     v:this.lhits,           c:'p',                  w:false},
+      {i:'⚡',l:'Respuesta más rápida',   v:`${fastT}s`,          c:'g',                  w:false},
     ];
 
     this.el.statsGrid.innerHTML=stats.map(s=>`
